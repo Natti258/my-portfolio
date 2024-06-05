@@ -43,6 +43,7 @@
 }
 
 
+
   .logo {
     display: block;
     width: 50px;
@@ -393,22 +394,59 @@
     right: 20px;
   }
 
-  .container-footer {
-  background-color: var(--secondary-color);
-  width: 100%;
-  height: auto;
-  margin-top: 10%;
- }
+  .footer {
+    margin-top: 8%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
- .logo-footer{
-  color: white;
-  width: 100px;
-  height: 100px;
- }
- .footerNav{
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-  color: var(--tertiary-color); /* Задаем контрастный цвет для ссылок */
-  text-decoration: none; /* Убираем подчеркивание, если это нужно */
+.logos img {
+    color: #fff;
+    max-width: 70px;
+    height: auto;
+    
+}
+
+.footer-nav ul {
+    
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color:var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 0.8em;
+    text-align: center;
+    width: 100%;
+}
+
+hr{
+  text-align: center;
+  color: var(--primary-color);
+  width: 30%;
+
 }
 
   /*page mywork*/
@@ -542,6 +580,25 @@
 
 
   @media (min-width:769px) and (max-width: 1030px) {
+
+    .slide-projeckt {
+      bottom: 30%;
+    }
+
+    .mywork .swiper-slide img {
+      right: 30%;
+      position: relative;}
+
+      .mywork h4 {
+        right: 15%;
+        margin-top: 5%;
+    }
+
+    .mywork .slide-projeckt{
+      bottom: 27%;
+      right: 5%;
+    }
+
    
     h1 {
       
@@ -596,6 +653,36 @@
   
   
   @media (min-width: 480px) and (max-width: 768px) {
+
+
+    .slide-projeckt {
+      bottom: 30%;
+
+    }
+    .mywork .swiper-slide{
+      width: 20%;
+    }
+    
+    .mywork .swiper-slide img {
+      right: 60%;
+      position: relative;}
+
+      .mywork h4 {
+       
+          left: 0;
+    }
+
+    .mywork .no-select{
+      right: 0;
+    }
+
+    .mywork .slide-projeckt{
+      bottom: 27%;
+      text-align: center;
+    }
+   .footer{
+    padding: 20px 50px;
+   }
 
     
     
@@ -720,6 +807,15 @@
 
  /* Медиа-запросы для экранов 480px и меньше */
 @media (max-width: 480px) {
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+   position: relative;
+    overflow: scroll;
+    list-style: none;
+  }
+
   h1 {
     width: auto;
     margin-top: 6.5vh;
