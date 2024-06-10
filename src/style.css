@@ -57,19 +57,21 @@
     width: 50px;
   }
 
-  .meinPhoto{
+  .meinPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
   }
-  .meinPhoto img{
-    justify-content: center;
-    display: flex;
-    background-color: #284b59;
-  padding: 20px 20px;
-  border-radius: 100%;
-    position: relative;
-    width: clamp(450px,50%,300px);
-    height: clamp(550px,50%,350px);
-  }
+  
+  .meinPhoto img {
+    display: block;
+    padding: clamp(5px, 50%, 10px);
+    border-radius: 50%;
+    width: clamp(150px, 50%, 250px);
+    height: clamp(150px, 50%, 250px);
+    object-fit: cover;
+}
   
   h1 {
     color: var(--primary-color);
