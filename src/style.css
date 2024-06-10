@@ -83,8 +83,8 @@
     display: block;
     padding: clamp(5px, 50%, 10px);
     border-radius: 50%;
-    width: clamp(150px, 50%, 250px);
-    height: clamp(150px, 50%, 250px);
+    width: clamp(350px, 50%, 250px);
+    height: clamp(350px, 50%, 250px);
     object-fit: cover;
 }
   
@@ -110,11 +110,107 @@
     position: relative;
     align-items: center;
   }
+
+  .content-title span{
+    width: clamp(300px,50%, 450px);
+  }
   .decorcolor {
     color: var(--secondary-color);
     font-weight: 800;
   }
   
+
+
+
+  /*skills*/
+
+  .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 5vh;
+}
+
+.skills h2{
+margin: 5vh
+}
+
+.container-skills {
+    color: var(--secondary-color);
+    padding: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-skills {
+    height: 20vh;
+    background-color: var(--hover-text-color); /* Замените на любой фон, который вам нравится */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px); /* 3 карточки в ряд на больших экранах */
+    max-width: calc(33.333% - 40px);
+}
+
+.card-skills img {
+    max-width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.card-skills h4 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+
+
+/*step work*/
+
+.circle-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle-item {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.circle-item:nth-child(1) { transform: rotate(0deg) translate(130px) rotate(0deg); }
+.circle-item:nth-child(2) { transform: rotate(60deg) translate(130px) rotate(-60deg); }
+.circle-item:nth-child(3) { transform: rotate(120deg) translate(130px) rotate(-120deg); }
+.circle-item:nth-child(4) { transform: rotate(180deg) translate(130px) rotate(-180deg); }
+.circle-item:nth-child(5) { transform: rotate(240deg) translate(130px) rotate(-240deg); }
+.circle-item:nth-child(6) { transform: rotate(300deg) translate(130px) rotate(-300deg); }
+
+
+
   /* Область работы */
 
   
@@ -404,7 +500,7 @@
 
   .footer {
     margin-top: 10vw;
-    background-color: var(--primary-color);
+    background-color: var(--hover-text-color);
     color: var(--quaternary-color);
     padding: 40px 20px;
     text-align: center;
@@ -728,6 +824,32 @@ hr{
   @media (min-width: 480px) and (max-width: 768px) {
 
 
+    /*step work*/
+    .circle-container {
+      width: 200px;
+      height: 200px;
+  }
+
+  .circle-item {
+      width: 80px;
+      height: 30px;
+      font-size: 12px;
+  }
+
+  .circle-item:nth-child(1) { transform: rotate(0deg) translate(90px) rotate(0deg); }
+  .circle-item:nth-child(2) { transform: rotate(60deg) translate(90px) rotate(-60deg); }
+  .circle-item:nth-child(3) { transform: rotate(120deg) translate(90px) rotate(-120deg); }
+  .circle-item:nth-child(4) { transform: rotate(180deg) translate(90px) rotate(-180deg); }
+  .circle-item:nth-child(5) { transform: rotate(240deg) translate(90px) rotate(-240deg); }
+  .circle-item:nth-child(6) { transform: rotate(300deg) translate(90px) rotate(-300deg); }
+
+    /*media card skills*/
+
+    .card-skills {
+      flex: 1 1 calc(50% - 40px); /* 2 карточки в ряд на мобильных устройствах */
+      max-width: calc(50% - 40px);
+  }
+
     .slide-projeckt {
       bottom: 30%;
 
@@ -880,6 +1002,36 @@ hr{
 
  /* Медиа-запросы для экранов 480px и меньше */
 @media (max-width: 480px) {
+
+  /*step work*/
+  .circle-container {
+    width: 150px;
+    height: 150px;
+}
+
+.circle-item {
+    width: 60px;
+    height: 25px;
+    font-size: 10px;
+}
+
+.circle-item:nth-child(1) { transform: rotate(0deg) translate(70px) rotate(0deg); }
+.circle-item:nth-child(2) { transform: rotate(60deg) translate(70px) rotate(-60deg); }
+.circle-item:nth-child(3) { transform: rotate(120deg) translate(70px) rotate(-120deg); }
+.circle-item:nth-child(4) { transform: rotate(180deg) translate(70px) rotate(-180deg); }
+.circle-item:nth-child(5) { transform: rotate(240deg) translate(70px) rotate(-240deg); }
+.circle-item:nth-child(6) { transform: rotate(300deg) translate(70px) rotate(-300deg); }
+
+     
+   /*media card skills*/
+
+  .container-skills{
+    padding: 0;
+  }
+   .card-skills {
+    flex: 1 1 calc(100% - 40px); /* 1 карточка в ряд на очень маленьких экранах */
+    max-width: calc(100% - 40px);
+}
 
   .swiper {
     margin-left: auto;
