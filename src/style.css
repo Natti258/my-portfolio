@@ -41,7 +41,9 @@
     text-decoration: none;
     white-space: nowrap;
 }
-
+.nav-link :hover{
+  color: #284b59;
+}
 
 
   .logo {
@@ -53,15 +55,34 @@
   .logo-page-aboutme{
     width: 50px;
   }
+
+  .meinPhoto{
+    margin: 0 auto;
+  }
+  .meinPhoto img{
+    justify-content: center;
+    display: flex;
+    background-color: #284b59;
+  padding: 20px 20px;
+  border-radius: 100%;
+    position: relative;
+    width: clamp(450px,50%,300px);
+    height: clamp(550px,50%,350px);
+  }
   
   h1 {
     color: var(--primary-color);
     margin-top: 6.5vh;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: clamp(4.5em,50%, 3em);
     font-weight: 800;
   }
   
+  .container h3{
+    
+    text-align: center;
+    font-size: clamp(54px,50%, 18);
+  }
   .content-title{
     font-size: 0.8rem;
     margin-top: 2vh;
