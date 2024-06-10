@@ -3,6 +3,8 @@
     --secondary-color: #ffa500;
     --tertiary-color: #ececec;
     --quaternary-color: #fff7e9;
+    --color:#dbe8fb;
+    --hover-text-color:#284b59;
     --swiper-pagination-bottom: 0px;
   --swiper-wrapper-transition-timing-function: var(--swiper-wrapper-transition-timing-function);
   }
@@ -42,9 +44,10 @@
     white-space: nowrap;
 }
 .nav-link :hover{
-  color: #284b59;
+  color:var(--hover-text-color);
   text-decoration: underline;
 }
+
 
 
   .logo {
@@ -57,6 +60,18 @@
     width: 50px;
   }
 
+  .mein{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5vh;
+    background-color: #dbe8fb;
+  }
+
+  .mein-content{
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+  }
   .meinPhoto {
     display: flex;
     justify-content: center;
@@ -75,12 +90,12 @@
   
   h1 {
     color: var(--primary-color);
-    margin-top: 6.5vh;
+    margin-top: 1.5vh;
     text-align: center;
-    font-size: clamp(4.5em,50%, 3em);
+    font-size: clamp(3.5em,50%, 2.5em);
     font-weight: 800;
-  }
-  
+}
+
   .container h3{
     
     text-align: center;
@@ -116,38 +131,7 @@
     border-radius: 5px;
   }
   
-  /* Контейнеры для GIF-изображений */
-  .gif-container {
-    position: absolute;
-    top: 5vh;
-    right: 10px;
-    width: 30vh;
-    height: 30vh;
-    overflow: hidden;
-    border-radius: 10% 20% 20% 20%;
-  }
   
-  .gif-container2 {
-    position: absolute;
-    top: 10vh;
-    left: 3vw;
-    width: 30vh;
-    height: 30vh;
-    overflow: hidden;
-    border-radius: 20% 5% 20% 20%;
-  }
-  
-  #video {
-    width: 120%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .gif-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
   
   .container-button {
     display: flex;
@@ -909,7 +893,7 @@ hr{
     width: auto;
     margin-top: 6.5vh;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 800;
     margin-bottom: 20px;
   }
